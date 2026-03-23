@@ -14,10 +14,7 @@ st.title("🤖 PAMS Help Chatbot")
 # -----------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(
-        r"C:\Users\sm2069\Desktop\Principal Schedule Queries.csv",
-        encoding='cp1252'
-    )
+    df = pd.read_csv("Principal Schedule Queries.csv", encoding='cp1252')
     df.columns = df.columns.str.strip()
     df['User Query'] = df['User Query'].str.lower()
     return df
