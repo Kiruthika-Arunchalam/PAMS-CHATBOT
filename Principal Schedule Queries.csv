@@ -1,0 +1,190 @@
+S.No,User Query,Structured Answer
+1,Where can I access the Principal Schedule module?,You can access it via Schedules ? Maintenance ? Principal Schedule or through module search
+2,Why am I able to see only one vessel in the Vessel search?,This was an issue identified during testing and has been fixed to display all applicable vessel codes
+3,Service search is showing only one service code. Is that correct?,No. This issue was reported and fixed to show all relevant service codes
+4,The system is showing short form like ?I? or ?U? in Excel import. Can it show full name?,Yes. Status display was updated to show full names instead of short forms (I/U) for better understanding
+5,Validation message for Bound is not clear. What should it show?,"The message was updated to: ?Enter a valid Bound (N, E, W, S)?"
+6,Why is global search not showing any records?,Global search issue was identified and addressed during development updates
+7,I?m getting an error while saving the schedule. Why?,Save-related issues were reported and resolved during testing phase
+8,Why is External Principal showing in Service Easy Search?,This was reported as not required and corrected accordingly
+9,Can I create Principal Schedule using Excel import?,Yes. You can create schedule via Import From Excel (.xls format only)
+10,Can I create schedule manually instead of Excel import?,"Yes. You can manually enter Principal, Vessel, Voyage, Service, Bound, Vendor, Operator and port details"
+11,Why am I unable to save schedule with only one port call?,System does not allow saving a schedule with a single port call
+12,Why is Save As copying the Group Call ID?,This issue was identified; Group Call ID should generate sequentially based on principal and was fixed
+13,"When using Save As, Vendor and Operator are getting cleared. Why?",This was reported as an issue and corrected in subsequent fixes
+14,Is Save As feature available in Principal Schedule?,Yes. Save As feature was added and approved under change request
+15,Why is system allowing confirmation for future sailings?,Validation for confirming future sailings was missing and reported for correction
+16,"While modifying schedule, system shows ?Arrival Report Generated? even though none exists. Why?",This issue was raised during testing for correction
+17,Why is validation triggered when changing terminal/date even if call is not confirmed?,This was identified as incorrect validation logic and reported during testing
+18,"After creating schedule, can system show confirmation message?",Suggested message: ?Auto routing created for the selected port pair.?
+19,Auto routing is created but From and To dates are missing. Why?,This issue was reported; routing dates should be captured based on configuration
+20,What should remark show in auto routing?,Suggested update: ?Auto routing generated from schedule.?
+21,Why is auto routing not created for some schedules?,This issue was reported for analysis and investigation
+22,Can I move port calls up or down?,Yes. Use Port Move Up / Port Move Down options (subject to validation rules)
+23,Why can?t I move down a port call?,You cannot move down a call if the next call has already received Arrival Report
+24,Why am I getting error while deleting a port call?,You cannot remove calls that are already deleted
+25,Can I permanently delete a port call?,Yes. Permanent delete is available for omitted calls and privileged users
+26,Why am I getting ?Select the Vessel Code? error?,Vessel Code is mandatory to create schedule
+27,Why is Bound mandatory while creating schedule?,Bound is required to create Principal Schedule
+28,Can I export Principal Schedule?,Yes. Use Export icon to download schedule in Excel format
+29,What modules are impacted by Principal Schedule?,"Booking, Bill of Lading, and Operations modules are impacted"
+30,Why is system not showing full status name in Import/Export Excel?,This was corrected to display full status names instead of abbreviations
+31,Why is External Feeder visible in Global Search?,This was reported to be removed from search results
+32,"Can I edit Service, Vessel, Voyage after saving?","No. In edit mode, Service, Vessel, Voyage and Bound are locked"
+33,What happens after schedule is finalized?,It can be viewed in Schedule Viewer and used in Booking & Operations
+34,Why is Excel import not accepting my file?,Only .xls format is supported for import
+35,Where can I find the Merge Booking option in PAMS?,You can access Merge Booking from Menu ? Booking ? Merge Booking or by typing ?Merge Booking? in the module search bar
+36,I?m not able to see any bookings. What am I missing?,"You must enter Service, Vessel, Voyage, PLA, POL, and POD before clicking Show. These fields are mandatory to fetch bookings"
+37,Why is the system asking me to enter Service before showing bookings?,"Service is mandatory to view booking records. Without selecting Service, the system will not fetch bookings"
+38,I entered POL but I can?t select POD. Why?,You must enter POL first before selecting POD. POD depends on POL selection
+39,Why is PLD disabled for me?,PLD becomes selectable only after entering POD
+40,I switched from Containerized to Non-Containerized and all data disappeared. Is that correct?,Yes. The system clears records when switching booking types to avoid stale data issues
+41,Why did my previous selection get cleared when I changed booking type?,"When switching between Containerized and Non-Containerized, the system automatically clears existing records to maintain clean data integrity"
+42,What?s the difference between New Book No and Nominated Book No?,"New Book No: System creates a new booking number and voids old ones. Nominated Book No: You specify the booking number to merge into, and old bookings get voided"
+43,"After merge, what happens to the old booking numbers?",Old booking numbers are deleted/voided and highlighted in red in Booking module
+44,I merged bookings but PLA and POL became blank. Why?,This issue was fixed. PLA/POL and related fields now retain their values after merge
+45,My operation data is missing after merge. Is this expected?,No. Operation data is now carried forward to the merged booking as per the latest enhancement
+46,I?m seeing duplicate container quantities after moving records. Why?,Earlier there was a duplication issue during shift selection. This has been fixed so quantities now reflect correctly
+47,I?m trying to merge DG booking but it?s throwing error.,DG booking merge validation has been updated. DG bookings can now be merged successfully
+48,Why am I getting ?No rows selected??,You must select at least one booking record before moving it forward/backward
+49,Why does it say ?Records not found??,"No matching bookings exist for the selected criteria, or invalid values were entered"
+50,Which fields are compulsory in Merge Booking?,All light cyan coloured fields are mandatory and must be filled before proceeding
+51,How do I confirm that merge was successful?,"After merge, search the new booking number in Booking module and check the Remarks tab. Old booking numbers will be shown in red"
+52,Why is Service field appearing above Vessel field now?,UI layout was updated to place Service search field above Vessel search field
+53,What happens if I select RORO/Break Bulk instead of Normal?,RORO/Break Bulk option gets enabled and Normal gets disabled. Process remains similar afterward
+54,Can I merge draft bookings?,Yes. You can choose Draft or Confirmed status before merging
+55,Can I merge confirmed bookings?,Yes. You can merge confirmed bookings by selecting Confirmed option
+56,Why is Bound automatically populated after selecting Voyage?,Bound is auto-fetched based on selected voyage
+57,I clicked Merge but nothing happened. What should I check?,Ensure you have selected bookings in ?Booking to Merge? box and confirmed the merge prompt
+58,Why can?t I move records to the right side?,You must select the row before clicking forward button
+59,Is Merge Booking available for both Normal and RORO shipments?,Yes. You can merge bookings for both Normal and RORO/Break Bulk shipments
+60,Can I export merge booking data?,Yes. Use the Export icon to download data in Excel format
+61,Can I print the merge booking details?,Yes. Use the Print icon from the toolbar
+62,What does Reset do in this screen?,Reset reverts changes back to default state
+63,Can I save merge booking templates?,Yes. Use the Magic Save icon to save templates for future use
+64,Who generally uses Merge Booking in the organization?,The module is primarily used by agency users
+65,Where can I find the Split BL option in PAMS?,You can access Split BL from Menu ? Documentation ? Export ? Split BL or by typing ?Split BL? in the module search bar
+66,Why do we use Split BL in shipping?,"Split BL allows you to divide a master BL into multiple sub-BLs by container, enabling separate documentation, billing, and tracking for each consignee"
+67,Can I split a BL after it is issued?,"Yes. If the BL is in Issued status, you must complete the Surrender process before proceeding with the split"
+68,The system is asking me to enter Surrender details. Why?,"If the BL is Issued, you must enter Surrendered By, Surrendered Date, Received By, and Received Date before splitting"
+69,I entered number of splits as 0 and it is not allowing. Why?,Number of splits cannot be zero. It must be greater than one
+70,Why is the system not allowing me to enter only 1 split?,The number of splits must be greater than one because splitting requires creating at least one additional BL
+71,I entered more splits than containers. Why am I getting error?,Number of splits must be less than or equal to the number of containers
+72,It says some containers are not assigned. What does that mean?,All containers must be assigned to a BL before completing the split
+73,I clicked save but no new BL number was generated.,Earlier there was an issue showing dummy references. Now logic ensures real booking references are generated and displayed after split
+74,"After splitting, the child booking type is not updating correctly.",This was fixed. The child booking now correctly reflects the updated booking type after split
+75,"When I split a non-containerized booking, quantity is not changing. Why?",The issue was corrected. Quantity now updates correctly based on the split for non-containerized bookings
+76,Cargo type is not updating after non-containerized split.,Cargo type update logic has been corrected and now reflects split changes properly
+77,Operations data is missing in the child booking after split.,Operations are now correctly carried forward from the master booking to child booking
+78,Confirmed user date is blank in the split booking.,Confirmed user date is now automatically inherited from the master booking
+79,The split booking screen keeps loading and not responding.,Performance issue related to processing/database slowdown has been fixed. Screen now loads properly
+80,I got an exception error while checking split booking.,Exception handling has been fixed. Split booking can now be accessed without errors
+81,Why is the system auto-locking the booking when I try to split?,Autolock behavior has been adjusted to prevent improper locking during normal split operations
+82,Can I split haulage load-confirmed bookings?,The system checks configuration for haulage load-confirmed bookings. There are no plugins restricting certain cases; validation depends on configuration
+83,Why is the system allowing split for load-confirmed non-containerized booking?,There is no plugin validation restricting this case. Behavior depends on system configuration
+84,Mandatory fields are not clearly highlighted on the split screen.,Mandatory fields are now properly highlighted for clarity
+85,Transaction progress is not updating after split.,"Transaction progress logic has been corrected, especially for non-containerized bookings"
+86,Why can?t I add containers after entering split count?,You must click the Create button after entering number of splits to enable container allocation
+87,How do I assign containers to a specific split BL?,"Use Equipment ID dropdown or enter container number in Match Container field, then click Apply"
+88,What happens if MCN is in pending status?,Split BL cannot be performed if MCN is in Pending or Submit status
+89,Can I split a BL without selecting it first?,No. You must select a BL before proceeding with split creation
+90,Why is the system asking me to enter Receiver Name?,Receiver Name is mandatory before proceeding with split process
+91,What happens to charges after splitting?,Charges can be viewed under Charges tab and saved accordingly for each split BL
+92,How do I confirm split was successful?,"After saving, system displays new BL numbers and booking numbers in confirmation modal"
+93,Where can I see split authority details?,"Split authority, date, and time are recorded in Remarks section in BL and Booking modules"
+94,Who generally uses the Split BL module?,The module is primarily consumed by Agency users
+95,Where can I access the BL Surrender module?,You can access BL Surrender from Menu ? Documentation ? BL Surrender or via module search by typing ?BL Surrender?
+96,What is the purpose of BL Surrender in the system?,BL Surrender allows users to surrender the original Bill of Lading to the import agency for smooth cargo release at POD
+97,Can I generate BL Surrender records using BL number?,"Yes. You can generate records using BL, Booking, or MCN reference"
+98,Can I create BL Surrender records by Service instead of BL number?,"Yes. You can generate BL Surrender records using Service, Vessel, and Voyage selection"
+99,I clicked Show but no records are appearing. What should I check?,You must enter search criteria (BL/Booking/MCN or Service details) before clicking Show
+100,Why is the system not allowing me to select this BL?,BL must be in Issued or Confirmed status to be selected
+101,I?m getting ?Select a BL Number? error. Why?,You must select a valid BL number before proceeding
+102,Why is the system asking me to select a Service first?,Selecting Service is mandatory before proceeding in BL Surrender
+103,It says ?To Address cannot be empty.? What does that mean?,"When sending mail, the To Address field is mandatory and cannot be left blank"
+104,I?m unable to send email from BL Surrender screen. Why?,"Earlier in testing, mail infrastructure was not configured. After configuration and validation, mail sending was confirmed working"
+105,Email is not triggering in testing environment. Is this a bug?,"Mail functionality depended on separate NFR configuration in testing. Once implemented, mail sending worked correctly"
+106,Has the email issue in BL Surrender been fixed?,Yes. Mail send actions were later confirmed working in the testing environment
+107,How do I send an email after surrendering a BL?,"Select the required option in Event Type column, enter To Address in the mail modal, and click Send"
+108,Why is HUA schedule showing under MEL principal?,This was a configuration issue. HUA schedule selection under MEL principal was corrected
+109,HUA schedule should not be selectable under MEL principal. Is it fixed?,Yes. The incorrect schedule selection behavior was fixed
+110,Who is allowed to hold the shipment in BL Surrender?,Only the Hold Agency is allowed to hold the shipment
+111,Why am I getting ?Only Hold Agency is allowed to held the shipment??,The system restricts hold action to authorized Hold Agency users only
+112,Can I surrender a BL that is not issued yet?,No. BL must be in Issued or Confirmed status to proceed
+113,What happens after BL Surrender email is sent?,The system shows status via color indications in the screen and confirms the mail action
+114,Why is the Show button disabled for me?,You must enter search criteria before clicking Show
+115,Are mandatory fields highlighted in BL Surrender?,Yes. Light cyan coloured fields are mandatory and must be filled before proceeding
+116,Can I surrender using MCN reference?,Yes. BL Surrender records can be generated using MCN reference
+117,What modules are impacted by BL Surrender?,BL Surrender supports documentation management and cargo release process within the system
+118,I entered Service but Vessel and Voyage are empty. Why?,"When generating by Service, you must select Service, then Vessel, then Voyage before clicking Show"
+119,Can I export BL Surrender data?,Yes. Use Export icon to download data in Excel format
+120,Can I print BL Surrender records?,Yes. Use the Print icon from the toolbar
+121,Is email sending the main purpose of BL Surrender screen?,Yes. One of the primary functions is to send surrender confirmation emails to stakeholders
+122,"If email is not working, who should configure it?",Mail delivery in testing depends on infrastructure configuration (NFR implementation)
+123,I?m clicking Send but no mail is delivered. What should I check?,Ensure testing environment mail infrastructure is configured; application-side functionality is already implemented
+124,Why is this BL not selectable in BL Surrender?,Only BLs in Issued or Confirmed status can be selected
+125,I cannot proceed without entering To Address. Is it mandatory?,Yes. To Address is mandatory to send email
+126,Can I surrender multiple BLs at once?,Records can be generated based on selected search criteria; actions depend on selected rows
+127,How do I know if surrender process is successful?,The system displays status using color indications and email confirmation prompt
+128,Where can I see the container enquiry history in the new system?,The Container Enquiry History (CEN) module allows users to view container enquiry history in the new system
+129,I want to track containers using BL number. Is that possible?,Yes. Configuration has been enabled to allow container tracking using BL number
+130,I entered BL number HUAMUM260236 but tracking was not working earlier. Why?,"Earlier, required configuration for BL-based tracking was missing. It has now been enabled and verified"
+131,Container tracking by BL was not working. Has it been fixed?,Yes. Necessary configuration changes were implemented and BL-based tracking is now functioning correctly
+132,The Enquiry History screen layout looks different from the shared screenshot. Why?,UI was updated to align with the reference screenshot shared by the user
+133,The alignment and spacing in Enquiry History screen looks incorrect. Is this fixed?,Yes. Layout adjustments and visual alignment were updated to match the expected UI design
+134,Is the Container Enquiry History module fully migrated to testing environment?,Yes. The CEN module and all required backend artefacts have been migrated to the testing environment
+135,What backend components were migrated for Enquiry History?,"Migrated components include source code, stored procedures, tables, synonyms, views, and functions"
+136,Are stored procedures and views properly set up for enquiry history?,"Yes. Stored procedures, views, tables, and functions supporting container enquiry are configured in the testing environment"
+137,Is container enquiry history properly linked with BL numbers now?,Yes. Correct linkage between containers and BL numbers has been verified through testing
+138,Has unit testing been done for Enquiry History?,"Yes. Unit testing was completed covering enquiry retrieval, BL-container linkage, and backend logic"
+139,What exactly was tested in Enquiry History?,"Testing covered retrieval of enquiry records, BL-container linkage, and behavior of stored procedures, views, and functions"
+140,I?m unable to retrieve enquiry history records. What could be wrong?,Ensure BL-based tracking configuration is enabled and backend artefacts are properly deployed in the environment
+141,Is Enquiry History available only in testing or production?,The story confirms migration and validation in the testing environment
+142,Was there any UI rework done for this module?,Yes. UI changes were implemented to match the user-provided reference screenshot
+143,Why was container enquiry not working earlier in EMS?,Required configuration and backend enablement for BL-based tracking were missing earlier
+144,Can I view complete container history from Enquiry History module?,Yes. The CEN module is designed to retrieve and display container enquiry history records
+145,Has the user validated the changes in Enquiry History?,Yes. User completed functional testing and confirmed readiness to proceed
+146,Is the issue status completed for Enquiry History?,Yes. The story status is marked as Completed after testing confirmation
+147,Are cross-database references working properly in Enquiry History?,Yes. Synonyms were migrated and configured to support cross-schema/database access
+148,"If BL-based container tracking fails again, what should be checked?",Check configuration enablement and backend artefacts such as stored procedures and views supporting BL-based lookup
+149,Was any code-level change required for BL tracking?,Yes. Configuration and backend setup changes were implemented to support BL-based container tracking
+150,Does Enquiry History support updated UI design standards?,Yes. UI was aligned with the expected screenshot design shared by the user
+151,Is container enquiry working for all BL numbers or only specific ones?,BL-based tracking is enabled generally; it was verified using BL HUAMUM260236 as a test case
+152,What happens if backend objects are missing in testing?,"Enquiry History functionality may fail; hence stored procedures, tables, views, synonyms, and functions were migrated to avoid such issues"
+153,The screen is opening but not showing expected container data. Why?,Ensure BL-based tracking configuration is enabled and backend objects are properly deployed
+154,Can I track enquiry history without BL number?,The enhancement specifically addressed BL-based tracking; other tracking depends on module configuration
+155,I?m getting a ?record locked? error while editing Booking. What should I do?,"When a Booking, BL, or MCN is locked due to concurrent access, you must use the Transaction Lock Reset module to unlock it"
+156,Why is my Booking number locked?,Transactions can get locked due to concurrent access or system-imposed locks
+157,How do I unlock a locked BL number?,"Open Transaction Lock Reset module, search using BL No., and click the Reset button to release the lock"
+158,Where can I find the Transaction Lock Reset screen?,Go to Menu ? Settings ? Master?s ? Customer/Vendor ? Transaction Lock Reset or search via module search
+159,Can I unlock both Booking and BL from this screen?,"Yes. You can search and reset locks for Booking No., BL No., and MCN No."
+160,I searched using Book No but nothing appears. Why?,Ensure correct search criteria is entered in the global search before clicking Search
+161,How do I check who locked the transaction?,"The screen displays details such as Module ID, Access Mode, Locked User, and Locked Time"
+162,"After clicking Edit in Booking, system shows validation error. What is happening?",There was inconsistency in booking screen edit behavior related to lock/reset logic
+163,"In one screen Booking is editable, but in another it shows validation error. Why?","Earlier, transaction lock logic was not applied consistently across Booking screen flows"
+164,"After retrieving Booking and clicking Edit, it allows editing without reset. Is that correct?",This behavior was identified as an issue. Booking screen changes were implemented to correct lock/reset logic
+165,Has the Booking screen edit inconsistency been fixed?,Yes. Booking screen scope changes were resolved and made available in the testing environment
+166,What happens when I click Reset in Transaction Lock Reset screen?,Clicking Reset releases the lock on the selected transaction
+167,Do I need special access to perform lock reset?,Yes. Users must understand authorization requirements before resetting transactions
+168,Can both line and agency users use Transaction Lock Reset?,Yes. The module is consumed by both line and agency users
+169,Why is the system preventing me from editing even after previous user logged out?,Lock may still exist at system level; use Transaction Lock Reset to release it
+170,What fields can I search with in Lock Reset?,"You can search using Booking No., BL No., or MCN No."
+171,I cannot proceed without filling certain fields. Are they mandatory?,Yes. Light cyan coloured fields are mandatory in ERP shipping solutions
+172,How do I know if reset was successful?,"After selecting the record and clicking Reset, the lock will be released and transaction becomes editable"
+173,Is Transaction Lock Reset available in testing environment?,Yes. Changes and unit test report were prepared and testing was requested to proceed
+174,Has unit testing been completed for Transaction Lock Reset?,Yes. Unit test report (PPD_575) was prepared and attached
+175,Why does the system lock transactions in the first place?,To prevent concurrent editing and ensure data integrity
+176,Can I reset lock for MCN number as well?,Yes. MCN No. can also be searched and unlocked
+177,What information is shown before resetting lock?,"Module ID, Access Mode, Locked User, and Locked Time are displayed"
+178,Does Reset delete any data?,No. Reset only releases the lock; it does not modify transaction data
+179,Can I export transaction lock data?,Yes. Use Export icon to download data in Excel format
+180,Can I print lock details for audit purposes?,Yes. Use the Print icon from the toolbar
+181,What if reset button is not working?,Ensure proper authorization and valid selection of record before clicking Reset
+182,Does retrieving a booking automatically remove lock?,No. Lock must be explicitly reset through Transaction Lock Reset module
+183,Is this module part of Documentation Management?,It is part of ERP Shipping Solutions under Settings ? Master?s ? Customer/Vendor
+184,When should I use Transaction Lock Reset?,"Use it when system shows lock error while accessing Booking, BL, or MCN records"
+185,Why does the system allow editing without reset after retrieval?,This was a previously identified inconsistency in Booking screen logic and has been fixed
+186,Why am I seeing validation message when clicking Edit in one screen but not another?,Transaction lock logic was earlier inconsistent; changes were implemented to standardize behavior
+187,Has the lock-reset related Booking screen issue been resolved?,Yes. The issue was resolved and made available in testing environment
+188,Where can I see lock-related testing evidence?,Unit test report (PAMS_UnitTestReport PPD_575) was prepared and attached
+189,"If multiple users try editing same Booking, how is it handled?",System locks the transaction to prevent concurrent edits; authorized users can release it via Lock Reset
