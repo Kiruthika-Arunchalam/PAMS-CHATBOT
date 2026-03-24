@@ -1,9 +1,9 @@
-st.write("✅ App Started Successfully")
+
 import streamlit as st
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
-
+st.write("✅ App Started Successfully")
 # -----------------------------
 # PAGE SETUP
 # -----------------------------
