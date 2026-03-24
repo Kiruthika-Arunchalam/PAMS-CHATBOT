@@ -1,3 +1,4 @@
+st.write("✅ App Started Successfully")
 import streamlit as st
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
@@ -14,11 +15,22 @@ st.title("🤖 PAMS Help Chatbot")
 # -----------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("Principal Schedule Queries.csv", encoding='cp1252')
-    df.columns = df.columns.str.strip()
-    df['User Query'] = df['User Query'].str.lower()
-    return df
-df=load_data()
+    import pandas as pd
+    
+    try:
+        df = pd.read_csv("Principal Schedule Queries.csv", encoding='latin1')
+        df.columns = df.columns.str.strip()
+        df['User Query'] = df['User Query'].str.lower()
+        return df
+
+    except Exception as e:
+        st.error(f"Error loading file: {e}")
+        return None
+
+df = load_data()
+
+if df is None:
+    st.stop()
 
 # -----------------------------
 # VECTORIZATION
